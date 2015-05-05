@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Offical Modernizr.com Blog]]></title><description><![CDATA[Front-End Development Done Right]]></description><link>https://modernizr.com</link><image><url>https://modernizr.com/img/logo.png</url><title>Offical Modernizr.com Blog</title><link>https://modernizr.com</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 05 May 2015 20:31:03 GMT</lastBuildDate><atom:link href="https://modernizr.com/feed" rel="self" type="application/rss+xml"/><language><![CDATA[en-US]]></language><ttl>1440</ttl><item><title><![CDATA[Modernizr 3, Stickers & Diversity]]></title><description><![CDATA[<p>While Modernizr was meant from day one to eventually become unnecessary, that day is far from here, and so development on the library goes on. Some of the things we’ve been busy with:</p>
+<h3 id="version-3">Version 3</h3>
+<p>Modernizr v.3 is not a mere version bump with some new additions; it is <a href="https://alexsexton.com/talks/modernizr-3-workflow/">a complete architectural rewrite</a> of the entire library <em>and</em> all of the 150+ community feature tests. The team and some of our great contributors have worked tirelessly to convert all of the tests to <a href="https://alexsexton.com/talks/modernizr-3-workflow/#/23/1">facilitate a new loading structure based on AMD</a>, and are currently embedding the tests with important meta-data such as known issues, sample usage and more. </p>
+<p>There is a new site in the making as well, with a new documentation page <a href="http://www.surveymonkey.com/s/BYKMMS7">taking your feedback into account</a> (feel free to fill out that survey if you haven’t yet), and a new download page that makes it much easier and faster to create the custom build that you need.</p>
+<p>You can help make v.3 become a reality by <a href="https://github.com/Modernizr/Modernizr/issues?q=is%3Aopen">closing issues</a>, or by updating <a href="https://github.com/Modernizr/Modernizr/pulls">open Pull Requests</a> to the new v.3-compatible format for tests (<a href="https://github.com/Modernizr/Modernizr/blob/master/feature-detects/a/download.js">see this example for what that looks like</a>).</p>
+<h3 id="stickers-">Stickers!</h3>
+<p><a href="http://devswag.com/products/modernizr-stickers-4"><img alt="an example of the modernizr logo on a sticker" src="http://modernizr.com/i/posts/modernizr-sticker.jpg" height="240"><img alt="the top of a macbook pro, with the modernizr sticker in the upper left" src="http://modernizr.com/i/posts/modernizr-sticker-laptop.jpg" height="240"></a></p>
+<p>While we work on version 3, you can show your support with some <a href="http://devswag.com/products/modernizr-stickers-4">fancy new Modernizr stickers</a>, courtesy of the fine folks at DevSwag. Put these stickers on your laptop, fixie bike, and anything else you’d like to “modernize” (ahem).</p>
+<p>The stickers are just $6 for a pack of four, and all of the proceeds that go to Modernizr will be donated to the <a href="https://adainitiative.org/">Ada Initiative</a>. All of us here at Modernizr care deeply about having a healthy and diverse community of developers, and the Ada Initiative does great work that we support.</p>
+<h3 id="diversity-in-tech-open-source">Diversity in tech &amp; open source</h3>
+<p>The tech community, and in particular open source, is currently quite male-dominated. By itself that’s not so much of a problem, but it becomes more of one when it leads to increasingly male-specific behavior and cultures, which can be hostile and alienating to various groups—other men included.</p>
+<p>Currently in tech, typically male behavior such as aggressiveness is rewarded with more visibility and, consequently, more opportunities. Discussions online, whether they’re about community diversity, ruby vs. python, or tabs vs. spaces, often devolve into a lot of verbal aggression, breeding an angry and hostile culture from which no one really benefits. Similarly, a harmless joke here or there isn’t a big deal, but the same kind of jokes over and over again breed a certain culture, and that culture is often exclusionary to people who don’t care for those jokes.</p>
+<p>When this happens within a small group of people, it’s one thing. When it happens <em>industry-wide,</em> we’re excluding people from our field altogether, and that is a terrible thing that fundamentally undermines the meaning and value of our work. “Merit” is a total fallacy if you only allow a certain kind of people to be measured for it.</p>
+<p>Our industry is vast and encompasses many different types of people. It is time to stop having this belief that tech, web development, or open source, is a community composed entirely of “other people who are just like us,” and that it gives us carte blanche for behaving however <em>we</em> want, or for saying whatever <em>we</em> want. Sexist, misogynist, racist, homophobic and otherwise exclusionary language, jokes and slurs—whether we put them in commits, source code, or comments to blog posts—are absolutely unacceptable.</p>
+<p>It’s time for us to stop trying to get the industry or community to behave according to the rules set forth by the most vocal majority. Each and every one of us deserves to be respected and listened to, to not be shouted down by an angry mob.</p>
+<p>We should not judge our peers solely by the quality of their code or pixels: that’s dehumanizing and wrong, and encourages individualism. It’s time for us all to embrace the diversity that we represent: different people from different backgrounds with different skills, ideas and opinions.</p>
+<p>Since Faruk first started Modernizr in 2009, it has evolved through a collective, social effort. This wouldn&#39;t have been possible without the vast range of different contributors, each bringing their own unique slant. It’s ultimately this diversity that has allowed Modernizr to be the broad-reaching tool it has become — and it will only be able to continue to grow and improve if it sticks to and supports these ideals across the entire community.</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-v3-stickers-diversity</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-v3-stickers-diversity</guid><dc:creator><![CDATA[Modernizr]]></dc:creator><pubDate>Tue, 02 Apr 2013 07:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr Policy on Browser Bugs and Feature Detects]]></title><description><![CDATA[<p>Modernizr detects features in browsers based on the APIs they expose to enable that feature. However, sometimes a browser vendor will implement a feature, but its implementation is buggy; for instance, its API exists but the output is not rendered, or the feature doesn’t work right—or even at all. This sometimes results in what we call “False Positives”: a feature that tests positively, but is not reliable or usable. (For example, Opera Mini provides a false positive for CSS Gradients.)  Other times we might calls these plain “browser bugs,” issues in the implementation that doesn’t affect the common use but is an edge case issue. (For example, <code>box-sizing</code> doesn&#39;t work with <code>min-height</code> in Firefox.)</p>
+<p>False positives are a developer’s nightmare: they can be hard to discover, even harder to fix, and are almost always frustrating. So what can we do?</p>
+<p>Modernizr aims for accuracy in tests based on their associated ECMAScript, HTML and CSS specifications. Yet sometimes something slips past and it reports a false positive. We are in the process of documenting these cases and putting them in one single page for easy consumption.</p>
+<h3 id="found-a-false-positive-">Found a false positive?</h3>
+<p>When you encounter a false positive, <a href="https://github.com/Modernizr/Modernizr/issues">add it to the Modernizr Issues tracker</a>. We will give it <a href="https://github.com/Modernizr/Modernizr/labels/false%20result">the “False result” label</a>. Also please clearly describe which browser(s) it is a false positive in, and whether the implementation is buggy, broken or incomplete.</p>
+<p>Wherever possible, we will attempt to work around the issue (for example: forcing a reflow, adding the element to the DOM, etc), though as a last result we will add a UA sniff. We&#39;d appreciate your help with a pull request, as well!</p>
+<p>Above all: <a href="http://coding.smashingmagazine.com/2011/09/07/help-the-community-report-browser-bugs/">report false positives to their respective vendors’ bug trackers</a>. (Many times it&#39;s a mobile port of WebKit that has the problem; while it may not exist in other WebKit ports, you can file these at the WebKit tracker regardless.) That is the best way to get these issues resolved, and helps Modernizr to be a great feature detection library.</p>
+<h3 id="browser-bug-">Browser bug?</h3>
+<p>We agree that browser bugs should be detected instead of assumed for given UA strings. This is how <code>jQuery.support</code> works. However, Modernizr detects features and will not be collecting bugs. We do recommend you <a href="http://coding.smashingmagazine.com/2011/09/07/help-the-community-report-browser-bugs/">file the issue with the appropriate vendor</a> and blog about it or post on Stack Overflow to get the word out there with your proposed fix.</p>
+<h3 id="thanks">Thanks</h3>
+<p>Modernizr will strive to report accurately, even if the browser is returning a false positive for the correct detect.</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-policy-feature-detects</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-policy-feature-detects</guid><dc:creator><![CDATA[Modernizr]]></dc:creator><pubDate>Mon, 07 Jan 2013 08:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr 2.6.2 released]]></title><description><![CDATA[<p>Summer is over, back to work! We’ve released Modernizr 2.6.2 with a number of new detects, bug fixes, and test improvements for your modern development needs.</p>
+<p>Some notable fixes include:</p>
+<ul>
+<li>Fix for a <a href="https://github.com/Modernizr/Modernizr/issues/524">hilarious edge case</a> in Safari where if you set your body or html element to <code>overflow-y: scroll</code> and apply styles to the webkit-scrollbars (<a href="http://jsbin.com/ecetor/4/edit#html">see demo</a>), the browser spontaneously refreshes</li>
+<li>HTML5 Shiv got a fix for better compatibility with jPlayer</li>
+<li>Generated Content false-positive fix for IE7</li>
+<li>Fix for our download builder and turning off css classes</li>
+<li>Better Travis CI output for unit tests using grunt</li>
+<li>All incoming pull requests are tested against our test suite with Travis CI</li>
+</ul>
+<h3 id="detects">Detects</h3>
+<p>We’ve also added some new detects:</p>
+<ul>
+<li>Content Security Policy</li>
+<li>CSS&#39;s <code>object-fit</code></li>
+<li><code>position: sticky;</code></li>
+<li><code>@supports</code> : CSS&#39;s new native feature detection</li>
+<li>viewport unit tests: vhunit, vmaxunit, vminunit, vwunit</li>
+<li><code>input[form]</code> attribute</li>
+<li>new iframe attributes: sandbox, seamless, srcdoc</li>
+<li>PointerLock API</li>
+</ul>
+<h3 id="test-improvements">Test improvements</h3>
+<p>And lastly, there have been updates to these tests:</p>
+<ul>
+<li><code>background-size: cover</code></li>
+<li>css filters</li>
+<li>css subpixelfont</li>
+<li>elem-track - reflecting partial support by IE10</li>
+<li>gamepad api</li>
+</ul>
+<p>For more details on the exact code changes of this release, see <a href="https://github.com/Modernizr/Modernizr/compare/v2.6.1...v2.6.2">the full changelog on GitHub</a>.</p>
+<p>We thank our great dev community who have contributed much of the work for this update. Thanks to their moms and dads, too.</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-262</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-262</guid><dc:creator><![CDATA[Modernizr]]></dc:creator><pubDate>Tue, 04 Sep 2012 07:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr 2.6 released]]></title><description><![CDATA[<p>Modernizr 2.6 is now available. Below is a summary of the major changes. The <a href="https://github.com/Modernizr/Modernizr/compare/v2.5.3...v2.6.1">full diff</a> is also available.</p>
+<p>You can download the <a href="http://modernizr.com/download/">latest at the builder</a>. You must upgrade if you&#39;re using geolocation or flexbox; otherwise you only <em>should</em> upgrade.</p>
+<h3 id="detects">Detects</h3>
+<p>We’ve added a lot of new tests, many of which by the community, and updated existing ones:</p>
+<ul>
+<li><strong>Geolocation</strong> used to be a trivial detect but two issues have come up recently that make it trickier. If you&#39;re using your own detect, <a href="https://github.com/Modernizr/Modernizr/blob/eeb5ca/modernizr.js#L457-469">read the details</a>.</li>
+<li>The ESR release of Firefox exposes MozWebsocket whereas every other supporting browser uses the standard <strong><code>WebSocket</code></strong>. We&#39;ve quickened and simplified our detect accordingly.</li>
+<li>We got a last minute pull request from David Baron, the czar of Gecko, who recommended we don&#39;t allow <code>Modernizr.testProp(&#39;pointer-events&#39;)</code> to pass, and instead require the camelcased equivalent: <code>pointerEvents</code></li>
+<li>Opera fixed a bug affecting the <strong><code>&lt;input type=color&gt;</code></strong> detect, so we&#39;ve sped up and simplified our detect.</li>
+<li>Our detect for <strong>flexbox</strong> has been updated as the new spec had naming changes. The detect for the flexbox implementation that you see in older mobile WebKit is now available as <code>flexboxlegacy</code> (without a hyphen).</li>
+<li>Our <strong>WebGL</strong> test got much faster, though it is less reliable. We made this decision because many Modernizr users include all tests they don&#39;t use and the earlier WebGL test could last for 500ms sometimes. If your site or app relies on the WebGL test, make sure you also have a fallback in case the context creation fails. It can fail due to inadequate GPU or lack of graphics memory, see also <a href="http://www.khronos.org/webgl/wiki/HandlingContextLost">recovering from a lost context</a>.</li>
+<li>Plenty more inline documentation added about detection weirdness. The <a href="https://github.com/Modernizr/Modernizr/blob/f9210de0ee4b1e0db142143/modernizr.js">source comments</a> are a fun read.</li>
+<li>As well as tightening up support for existing tests, we&#39;ve also added a number of new detects, many submitted by the community:<ul>
+<li>blob-constructor</li>
+<li>css-backgroundposition-shorthand</li>
+<li>css-backgroundposition-xy</li>
+<li>css-calc</li>
+<li>css-filters<ul>
+<li>Detecting the <a href="http://www.html5rocks.com/en/tutorials/filters/understanding-css/">new CSS filters</a>, but not catching the legacy IE filter property.</li>
+</ul>
+</li>
+<li>css-lastchild</li>
+<li>css-mask<ul>
+<li>This correctly finds the WebKit mask property without a false positive on Firefox&#39;s SVG mask support.</li>
+</ul>
+</li>
+<li>css-regions<ul>
+<li>Contributed by Adobe.</li>
+</ul>
+</li>
+<li>css-subpixelfont</li>
+<li>exif-orientation<ul>
+<li>Did you know iOS Safari is the only browser to use the orientation bit in EXIF and rotate the asset accordingly? Well, Modernizr does.</li>
+</ul>
+</li>
+<li>forms-fileinput<ul>
+<li>Detecting <code>&lt;input type=file&gt;</code> not working on iOS &lt;6</li>
+</ul>
+</li>
+<li>dart</li>
+<li>network-xhr2<ul>
+<li>Which has an <a href="https://github.com/Modernizr/Modernizr/issues/385">interesting testing story</a></li>
+</ul>
+</li>
+<li>style-scoped</li>
+<li>svg-filters<ul>
+<li>Only detects SVG filters appling to SVG content. SVG filters on HTML is <a href="https://github.com/Modernizr/Modernizr/issues/606">awaiting</a>.</li>
+</ul>
+</li>
+<li>vibration</li>
+<li>You can <a href="https://github.com/Modernizr/Modernizr/tree/master/feature-detects">view all of these detects on GitHub</a> and add them in the <a href="http://modernizr.com/download">download builder</a> today.</li>
+</ul>
+</li>
+</ul>
+<h3 id="dependencies">Dependencies</h3>
+<ul>
+<li><strong>html5shiv</strong> is now up to 3.6, fixing <a href="https://github.com/aFarkas/html5shiv/compare/3.4...master">some edgecases</a> users ran into</li>
+<li><strong>yepnope</strong> was updated to 1.5.4</li>
+</ul>
+<h3 id="development-workflow-">Development Workflow:</h3>
+<ul>
+<li>We&#39;re using <strong><a href="http://editorconfig.org/">EditorConfig</a></strong> to keep our whitespace policy consistent</li>
+<li><strong><a href="http://gruntjs.com">GruntJS</a></strong> powers our automatic linting and minification now.</li>
+<li>We are integrated with <strong>Travis</strong>, so after all commits, <a href="http://travis-ci.org/#!/Modernizr/Modernizr/builds">Travis runs our test suite</a> in a headless WebKit via PhantomJS.</li>
+</ul>
+<p>Up next, we&#39;re going to clarify our touch detect: Is it detecting touch devices or touch events; and which touch event model?  We&#39;re also going to redesign the download page and update the documentation with some more <a href="https://hacks.mozilla.org/2012/07/the-web-developer-toolbox-modernizr/">approachable documentation</a>.</p>
+<p>As always,  if you&#39;d like to get involved, hop into the <a href="https://github.com/Modernizr/Modernizr/issues">GitHub issue tracker</a>.</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-260</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-260</guid><dc:creator><![CDATA[Modernizr]]></dc:creator><pubDate>Thu, 19 Jul 2012 07:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr 2.5: Supercharged for 2012]]></title><description><![CDATA[<p>Modernizr 2.0 came out more than eight months ago; we’ve not sat still in the period since, and today we’re proud to announce the release of Modernizr 2.5, our biggest update yet!</p>
+<h3 id="newin2.5">New in 2.5</h3>
+
+<p>The <a href="https://github.com/Modernizr/Modernizr/compare/v2.0.6...v2.5.1">list of new things in 2.5</a> is too big for GitHub to handle, but here are the highlights:</p>
+<ul>
+<li>More than 60 new feature detects for emerging browser features; check out <a href="https://gist.github.com/783522a92b79a0868532">the full list</a> or peruse <strong>all</strong> of the community-driven tests in our <a href="https://github.com/Modernizr/Modernizr/tree/master/feature-detects">feature-detects folder</a>.</li>
+<li>We now have a super robust and integrated <a href="http://modernizr.github.com/Modernizr/test/index.html">test suite</a>. Paul did a great video <a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=Mbt6h1BFW8g">detailing how it works</a>.</li>
+<li>Brand new embedded and included micro-libraries: html5shiv 3.2 and yepnope .js 1.5.</li>
+<li><code>Modernizr.prefixed()</code> can now <a href="/docs/#prefixeddom">detect prefixed DOM features</a> and give you a hook. E.g.: <code>Modernizr.prefixed(&#39;requestAnimationFrame&#39;, window) // rAF function</code></li>
+<li>Bugfix for possible false negative when browser support for prefixed CSS Transforms is sunsetted.</li>
+<li><p>We now ship with a <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind polyfill</a> included by default. You&#8217;re welcome!</p>
+<p>Modernizr 2.5 introduces some minor backwards-compatibility breaks due to changes in features and behavior.</p>
+</li>
+<li><p>We no longer include Respond.js in the builder. If you still require Respond.js in your project, just include it manually.</p>
+</li>
+<li><code>Modernizr._domPrefixes</code> has been renamed to <code>Modernizr._cssomPrefixes</code>, and a new, lower-case <code>Modernizr._domPrefixes</code> has been introduced.</li>
+<li><p>We’ve removed KHTML prefix testing, due to lack of usage.</p>
+<p>We encourage all users to upgrade to Modernizr 2.5, as there should be no regressions. If you do happen to encounter issues, please <a href="https://github.com/Modernizr/Modernizr/wiki/Filing-a-bug">file them on GitHub</a>.</p>
+<h3 id="thanks">Thanks</h3>
+
+<p>This great release would not have been possible were it not for the many contributions from people who volunteered bug reports, bug fixes and all new tests. We’ve made <a href="/contributors/">a dedicated page to thank everyone</a> who contributed to Modernizr 2.5; this release has been the most collaborative effort yet for Modernizr, and we couldn’t be more excited about that.</p>
+</li>
+</ul>
+<p>We’re similarly excited to announce the expansion of the team. Ryan Seddon has been made an official member at last, and we also welcome Alexander Farkas to the team. And speaking of Ryan, he’s done a great <a href="https://learnable.com/courses/modernizr-front-end-development-done-right-2561">Learnable course on Modernizr</a>, so if you’re relatively new to the library you should check it out!</p>
+<h3 id="elsewhere">Elsewhere</h3>
+
+<p>While not a Modernizr effort, we do want to bring some attention to a very useful new reasource, ideal for people who use Modernizr: <a href="http://html5please.us/">HTML5 Please</a>. Together with <a href="http://caniuse.com/">Can I Use…</a>, these two sites should cover all your questions over which features are <em>reliable and safe</em> to use based on what audiences you need to support.</p>
+<p>We’d also like to note that our <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">HTML5 Cross Browser Polyfills wiki</a> is still growing, with many more polyfills having been added.</p>
+<p>Modernizr 2.5 is the best starting library for anyone taking advantage of the latest in HTML5 and related technologies, and we hope you’ll enjoy it.</p>
+<hr>
+<p id="update252"><strong>Update Feb 8:</strong> we’ve included another couple of small—but significant—updates, and have released Modernizr 2.5.2.</p>
+
+<p>Notably, this latest update includes <strong>html5shiv 3.3</strong>, which features an up to 16x performance increase over the shiv that was bundled in Modernizr 2.0. The html5shiv team (Jonathan Neal, John-David Dalton, and Modernizr team member Alexander Farkas) has been hard at work (<a href="https://github.com/aFarkas/html5shiv/wiki">view changelog</a>) making this <a href="http://paulirish.com/2011/the-history-of-the-html5-shiv/">foundational</a> piece of the HTML5 infrastructure fast and robust. <small>(To be clear, this is the exact same shiv available in Remy Sharp&#39;s googlecode repos.)</small> Plus, using Modernizr 2.5 (with the included html5shiv 3.x), you no longer need <a href="http://jdbartlett.com/innershiv/">innerShiv</a>; the fix is automatic.</p>
+<p>Additionally, our <a href="/download/">download builder</a> now ships with <strong><a href="http://yepnopejs.com/#whatsnew">Yepnope 1.5.2</a></strong>.</p>
+<p>We also want to highlight a few more changes from 2.5:</p>
+<ul>
+<li>We’ve toughened up <code>canPlayType</code> checks for Firefox 3.5.0, 3.5.1 and 4.0.0 - 4.0.4</li>
+<li>In iOS5 Private Browsing mode you can use <code>localStorage.getItem</code> but it throws an exception for <code>setItem</code>. We test it out and set <code>Modernizr.localStorage</code> to false if we cannot store.</li>
+<li>We now have a <a href="http://html5please.us/#datalist"><code>&lt;datalist&gt;</code></a> detect with no false positives! It’s accessible through <code>Modernizr.input.list</code> [<a href="https://github.com/Modernizr/Modernizr/issues/146">#146</a>]</li>
+<li>If you use the <code>transitionEnd</code> event, we’ve <a href="http://www.modernizr.com/docs/#s25">documented</a> the correct IE10 and spec’d behavior.</li>
+<li>If you, by chance, have a class of <code>oh-no-js-oh-my</code> on the <code>&lt;html&gt;</code> element we wont remove it anymore as part of our <code>no-js</code> to <code>js</code> switch.</li>
+<li>The <a href="https://github.com/Modernizr/Modernizr/wiki">Modernizr wiki</a> has been reorganized. Much cleaner!</li>
+</ul>
+]]></description><link>https://modernizr.com/news//news/modernizr-25</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-25</guid><dc:creator><![CDATA[Modernizr]]></dc:creator><pubDate>Mon, 06 Feb 2012 08:00:00 GMT</pubDate></item><item><title><![CDATA[How Does Modernizr’s Test Suite Work?]]></title><description><![CDATA[<p>Sometimes, members of the team get asked how we ascertain and verify that the features we detect are accurately detected. It’s not always a simple process, but over time we’ve put together a test suite that helps us out a lot.</p>
+<p>Paul has recorded a screencast discussing how this test suite for Modernizr was built. The brief summary: initially built with QUnit, the test suite has coverage over the full API surface area of Modernizr, even using kangax’s <a href="https://github.com/kangax/detect-global">detect-global</a> script to assure no globals are introduced beyond <code>Modernizr</code> and <code>yepnope</code>. After that it gets interesting—as verifying the results from Modernizr’s detection of the current browser’s features isn’t straightforward. We end up using APIs from both Caniuse.com and GitHub, using projects like Lloyd Hilaiel’s <a href="http://jsonselect.org/">JSONSelect</a>, Lindsey Simon&#39;s <a href="https://github.com/tobie/ua-parser">ua-parser</a> (ported to Node by <a href="http://twitter.com/tobie">@tobie</a>), some ES5 polyfills, and some real sexy jQuery Deferred action to elegantly handle a bunch of <code>$.getScript</code> calls.</p>
+<p>20 minutes of javascript and feature detection action below.</p>
+<iframe title="Modernizr's test suite: Behind the Scenes" width="640" height="480" src="https://www.youtube.com/embed/Mbt6h1BFW8g?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+]]></description><link>https://modernizr.com/news//news/modernizr-test-suite</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-test-suite</guid><dc:creator><![CDATA[Modernizr]]></dc:creator><pubDate>Mon, 07 Nov 2011 08:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr and Content Delivery Networks (CDNs)]]></title><description><![CDATA[<p>One of the most common requests around Modernizr is for it to be made available on a Content Delivery Network. Back in the 1.x days this made a fair bit of sense: there was only one version of the library, and so the compressed version would be useful to have on a CDN for performance reasons.</p>
+<p>With the advent of Modernizr 2, however we&rsquo;ve (re)introduced modular builds of the library, which make the value of CDNs less self-evident. We now make you create a customized build of Modernizr&mdash;using only the tests you actually need&mdash;when you want a production-ready, minified &amp; compressed version of the library. But with over 40 embedded tests, supporting all possible combinations of tests is impossible, aside of being downright undesirable.</p>
+<p>This has caused some confusion, so we&rsquo;d like to explain the right way to use Modernizr under the various different scenarios that occur.</p>
+<h3 id="development">Development, local: General development and/or learning</h3>
+
+<p>When you start building a new project, or if you simply want to learn, you should download <a href="http://www.modernizr.com/downloads/modernizr-latest.js">the latest development version of Modernizr</a>. This is typically a stage where you don&rsquo;t know yet which feature detection tests you&rsquo;ll eventually need by the time you go to production, and don&rsquo;t need to worry about minification. If you&rsquo;re building your site or app locally, this is the version to use.</p>
+<h3 id="special">Development + CDN: Test cases, one-offs, partial control-situations</h3>
+
+<p>If you&rsquo;re creating a quick test case using something like <a href="http://jsfiddle.net/">jsfiddle</a>, or are writing an entry for a contest like <a href="http://10k.aneventapart.com/">10K Apart</a>, using a CDN can be not just useful, but downright necessary. If your situation relies on externally-hosted code, use one of the CDN releases.</p>
+<p>But be warned: <em>these versions contain all 40+ tests!</em> That means they are full-fledged libraries with almost certainly a lot of things you don&rsquo;t need in a final product.</p>
+<p>That&rsquo;s why the <a href="http://www.asp.net/ajaxlibrary/cdn.ashx#Modernizr_Releases_on_the_CDN_5">Microsoft CDN</a> and <a href="http://www.cdnjs.com/#/search/modernizr">CDNJS</a> releases of Modernizr are essentially just Development versions, but hosted somewhere for you to use.</p>
+<h3 id="production">Custom build: All production uses</h3>
+
+<p>Are you priming your website or app for production? Then it&rsquo;s time to head over to <a href="http://www.modernizr.com/download/">the custom download builder</a>, tick all the tests your project makes use of, and hit that Generate button to make your own special build.</p>
+<p><strong>All production uses of Modernizr should be using a latest custom build from the site.</strong> This ensures that you won&rsquo;t run into any (old) bugs, and will have the absolute minimum amount of code and execution time needed for the best possible performance.</p>
+<p>As an added bonus, these custom builds now include a directly-usable Build link that allow you to make small tweaks&mdash;change a setting here or there&mdash;without having to figure out your requirements all over again. It&rsquo;s also helpful whenever a new stable build is released: just revisit that Build link from your custom build&rsquo;s source, hit Generate again and you have a new, updated stable build. Always be sure to test!</p>
+<p>We hope this simple guide helps you figure out when to use what version of Modernizr.</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-and-cdns</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-and-cdns</guid><dc:creator><![CDATA[Team Modernizr]]></dc:creator><pubDate>Thu, 01 Sep 2011 07:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr 2]]></title><description><![CDATA[<p>The long wait is over—Modernizr 2 is here! Modernizr 2 takes feature detection to the next level, enabling a powerful new approach to building great websites and applications that elegantly respond and adapt to the user’s environment.</p>
+<p>What’s new:</p>
+<ul>
+<li>Media Query testing:<br/>
+<code>Modernizr.mq(&#39;only all and (max-width: 600px)&#39;) // true</code></li>
+<li>Conditional resource loading via <code>Modernizr.load()</code> — powered by <a href="http://yepnopejs.com/">yepnope.js</a>;</li>
+<li>Vendor prefix detection<br/>
+<code>Modernizr.prefixed(&#39;transform&#39;) // &#39;WebkitTransform&#39;</code></li>
+<li>A whole new set of <a href="/docs/#s3">extensibility methods</a>, so its easy to augment the Modernizr tests with your own.</li>
+<li>A brand new site!</li>
+<li>…with the <a href="/download/">custom build tool</a> baked right in;</li>
+<li><p>…and a completely revamped, much more detailed <a href="/docs/">Documentation</a> page.</p>
+<p>Modernizr 2 now contains <strong>40</strong> feature detection tests, but only the development version will come bundled with all of them. When you are ready to get a compressed and minified production build, simply go to the <a href="/download/">Download</a> page and pick and choose only the tests and features that you need. This way, we ensure that your production build will have the absolute smallest footprint and fastest execution time possible.</p>
+<p>A little tip: when you make a custom build, your URL will be adjusted to reflect your choices exactly. Bookmark it after building in case you ever need to go back and adjust your settings!</p>
+<p>We know you might need to detect more than what’s available in the Modernizr core. Keep an eye on <a href="https://github.com/Modernizr/Modernizr/tree/master/feature-detects">our feature-detects</a> folder for the best-of-breed detections for everything.</p>
+</li>
+</ul>
+<p>Want to learn how to do conditional resource loading with <code>Modernizr.load()</code>? Our new documentation comes with a great <a href="/docs/#load">Modernizr.load tutorial</a> that takes you through the basics and gets you started. Alternatively, you could check out our site’s own <a href="/i/js/modernizr.com-custom.js">modernizr.com-custom.js</a> for some inspiration.</p>
+<p>We’d love to get your feedback on the new Modernizr, the new site and our new documentation and resources pages. <a href="https://twitter.com/?status=@Modernizr%20">Let us know via Twitter</a>, especially if you come across a bug somewhere—things are still a little rough around the edges here and there, but we figured you’d prefer to have Modernizr 2 sooner rather than later.</p>
+<p>A huge thanks goes out to all of our contributors who provided code for additional tests, helped us with debugging and getting our detection algorithms right, and so much more. Additionally, special thanks go out to Simon a.k.a. Simurai, for crafting some fancy CSS3 buttons for us, Ryan Seddon for integration work, and Aaron Gustafson for making sure our ARIA roles were top notch.</p>
+<p>— Team Modernizr (Faruk Ateş, Paul Irish and Alex Sexton)</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-2</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-2</guid><dc:creator><![CDATA[Team Modernizr]]></dc:creator><pubDate>Wed, 01 Jun 2011 07:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr 1.7 changelog]]></title><description><![CDATA[<p>We put 1.7 live some time ago but never got around to publishing a changelog. Since people have been asking, below are the core changes. For an exact changelog, see the <a href="https://github.com/Modernizr/Modernizr/compare/v1.6...v1.7">commit log on GitHub between 1.6 and 1.7</a>.</p>
+<p>At the heart of 1.7 are the following major changes:</p>
+<ul>
+<li>A weaker, less crash-prone test for WebGL</li>
+<li>A fix for @font-face in certain browsers</li>
+<li>Faster Drag &amp; Drop test</li>
+<li>Updated IE Print Protector for better speed and reliability</li>
+<li>One less content reflow&nbsp;due to better className setting</li>
+</ul>
+<p>Beyond these main changes, 1.7 fixes lots of small bugs like tiny memory leaks and the occasional false returns in certain browsers.&nbsp;</p>
+<p>A small update on the Modernizr 2 front: we&rsquo;re getting very close to releasing it, so if you encounter any major bugs using either 1.7 or the <a href="http://modernizr.github.com/Modernizr/2.0-beta/">2.0 beta builder</a>, please <a href="https://github.com/Modernizr/Modernizr/issues">report them on GitHub</a>&nbsp;as soon as possible. We already have a lot of issues and features pushed to our planned 2.1 release, but would love to make sure that the 2.0 release is the absolute best version of Modernizr yet.</p>
+]]></description><link>https://modernizr.com/news//news/odernizr-17-changelog</link><guid isPermaLink="true">https://modernizr.com/news//news/odernizr-17-changelog</guid><dc:creator><![CDATA[Team Modernizr]]></dc:creator><pubDate>Thu, 12 May 2011 07:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr 2 Beta]]></title><description><![CDATA[<p>A brand new year, a brand new Modernizr! What&rsquo;s new in 2011:</p>
+<ul>
+<li>A new addition to our team, Alex Sexton</li>
+<li>We&rsquo;re introducing a new builder, so you can customize your download of Modernizr to suit your needs</li>
+<li><p><a href="http://modernizr.github.com/Modernizr/2.0-beta/">A first beta release of Modernizr 2!</a></p>
+<p>But first, let&rsquo;s quickly recap what happened in 2010, which was a fantastic year for Modernizr. We had the major <a href="http://www.modernizr.com/news/modernizr-15">1.5 release</a> really <a href="http://engineering.twitter.com/2010/09/tech-behind-new-twittercom.html">hitting it big</a>, the incremental 1.6 and <a href="http://www.modernizr.com/news/modernizr-1-6">small site update</a>, and finishing off the year by winning the Open Source Application of the Year category at the <a href="http://www.thenetawards.com/">2010 .net Awards</a>. We&rsquo;d like to thank all of our contributors for their hard work making this such a great open source application. But looking forward to 2011, we have so much more in store for you that 2010 will appear mundane by comparison.</p>
+<p>We&rsquo;re kicking it off with some pretty exciting news right away. First, we&rsquo;ve expanded our team to include <a href="http://alexsexton.com/">Alex Sexton</a>. Due to this addition we&rsquo;ve also formalized our individual roles in the Modernizr Team, as such:</p>
+</li>
+<li><p><a href="http://farukat.es/">Faruk Ateş</a>: Project Lead</p>
+</li>
+<li><a href="http://paulirish.com/">Paul Irish</a>: Lead Developer</li>
+<li><p><a href="http://alexsexton.com/">Alex Sexton</a>: Developer</p>
+<p>Second, Alex has been working on something we&rsquo;ve all wanted since the day Modernizr was released, and that&rsquo;s the ability to customize your own download of the library to only include the tests that you want. This functionality was kept out for simplicity&rsquo;s sake originally, but has become sorely needed since then. Thanks to Alex, Modernizr 2 will have this functionality&mdash;and even better than originally imagined, too. The original plan involved a server-side compiler, but Alex&rsquo;s fine work, unofficially named <em>Modulizr</em>, has brought us an all-client side builder.</p>
+<p>Best of all: you can start playing around with it <em>right now</em> because today we&rsquo;re launching <a href="http://modernizr.github.com/Modernizr/2.0-beta/">the first beta of Modernizr 2!</a></p>
+<p>This very first beta introduces the customizability of Modernizr 2, allowing you to pick and choose the tests you want in your production-optimized download. We&rsquo;d love to get your feedback through use of the (beta) builder, so please head on over the beta page and configure your preferred download of Modernizr.</p>
+<p>Looking beyond the beta, our road map for Modernizr already includes specifics for a 2.1 release. We&rsquo;re committed to getting Modernizr 2 finished and out in the open as soon as possible, and will have more announcements for you in the near future. For now, <a href="http://modernizr.github.com/Modernizr/2.0-beta/">enjoy the beta</a> and have a fantastic 2011!</p>
+<p>&mdash; Team Modernizr</p>
+</li>
+</ul>
+]]></description><link>https://modernizr.com/news//news/modernizr-2-0-beta</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-2-0-beta</guid><dc:creator><![CDATA[Team Modernizr]]></dc:creator><pubDate>Mon, 17 Jan 2011 08:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr 1.6 &amp; The Road To 2.0]]></title><description><![CDATA[<p>Today we&rsquo;re announcing the new Modernizr 1.6, an interim release in the run-up to the upcoming Modernizr 2.0&mdash;a release slated for later this year which will take the library to the next level.</p>
+<p>Before we get into what&rsquo;s new in 1.6, we want to quickly thank <a rel="external" href="http://twitter.com/darcy_clarke">Darcy Clarke</a> for his quick but handy CSS tweaks to our site, cleaning things up a little and improving legibility. Much like today&rsquo;s 1.6 release, these changes to the site reflect some of what&rsquo;s coming up in the new 2.0 release and the &ldquo;2.0&rdquo; website, if you will.</p>
+<p>As said, Modernizr 1.6 is an interim release and closes some important issues while adding a few new detections. Besides bringing it down to a mere 3.8Kb minified and gzipped, the biggest improvement is a completely revised <strong>@font-face</strong> test, which fixes the FOUT&mdash;Flash Of Unstyled Text&mdash;which was a somewhat common issue when combining Modernizr with Typekit.</p>
+<p>We&rsquo;ve also added support for WebGL, Touch events, <a rel="external" href="http://www.w3.org/TR/css3-flexbox/">Flexible Box Layouts</a> and Inline SVG. Additionally, several existing tests have been improved to better support newer browser releases, as well as fix some minor bugs.</p>
+<p>There are some important changes in 1.6: first, the Modernizr.websqldatabase test has been simplified. It no longer creates a database, which solves <a rel="external" href="http://github.com/Modernizr/Modernizr/issues/closed#issue/113">an annoying Safari pop-up issue</a> and stops Modernizr from littering the web with databases, but it comes at somewhat of a cost: Chrome in Incognito mode will now false-positive on this test. The extended test remains commented-out in the non-minified source, for those who need it to be exact.</p>
+<p>Second, we&rsquo;ve deprecated two properties: Modernizr.crosswindowmessaging and Modernizr.historymanagement. Going forward, these two properties are simply:</p>
+<ul>
+<li>Modernizr.postmessage</li>
+<li><p>Modernizr.history</p>
+<p>Simpler, cleaner, and they now match the actual DOM property they&rsquo;re testing for. Keep in mind that, as with other tests, the Modernizr property is all-lowercase but the actual DOM property is window.post<strong>M</strong>essage.</p>
+<p>Lastly, we&rsquo;ve put the oft-requested CSS text-shadow test in this release. It still false-positives in Firefox 3.0, but we think web designers are okay with that these days.</p>
+<p>We hope you enjoy this new release, and stay tuned for big changes with the upcoming Modernizr 2.0!</p>
+</li>
+</ul>
+<p>Download the new Modernizr 1.6 from <a href="/">the front page</a></p>
+]]></description><link>https://modernizr.com/news//news/modernizr-1-6</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-1-6</guid><dc:creator><![CDATA[<a href="http://farukat.es/">Faruk Ateş</a>]]></dc:creator><pubDate>Mon, 25 Oct 2010 07:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr 1.5: new features, unit tests added]]></title><description><![CDATA[<p>We&#39;re proud and pleased to announce the immediate release of <a href="/">Modernizr <strong>1.5</strong></a>!</p>
+<p>Rather than an incremental upgrade, we&#39;ve opted to shift into a higher gear and add the full shebang of what we&#39;ve been working on. Here&#39;s a list of new things we detect:</p>
+<ul>
+<li><a target="_blank" href="http://www.w3.org/TR/SVG/">SVG</a>! Including <a target="_blank" href="http://www.w3.org/TR/SVG11/masking.html">SVG Clipping Paths</a> and <a target="_blank" href="http://www.w3.org/TR/REC-smil/">SMIL</a></li>
+<li><a target="_blank" href="http://dev.w3.org/html5/webdatabase/">Web SQL Database</a></li>
+<li><a href="http://www.w3.org/TR/IndexedDB/">IndexedDB</a></li>
+<li><a target="_blank" href="http://dev.w3.org/html5/websockets/">Web Sockets</a></li>
+<li><a target="_blank" href="http://dev.w3.org/html5/spec/history.html#event-hashchange">hashchange event</a></li>
+<li><a target="_blank" href="http://www.w3.org/TR/2010/WD-html5-20100304/history.html">History and Session Management</a></li>
+<li><a target="_blank" href="http://dev.w3.org/html5/spec/dnd.html#dnd">HTML5 Drag and Drop</a></li>
+<li><p><a target="_blank" href="http://www.w3.org/TR/2010/WD-html5-20100304/comms.html#posting-messages">Cross-document Messaging</a></p>
+<p>Additionally, IE can now print HTML5 elements (courtesy of <a target="_blank" href="http://twitter.com/jon_neal">@jon_neal</a>&#39;s print protector), IE9 should be fully supported (<a target="_blank" href="http://twitter.com/?status=@Modernizr%20I%20found%20an%20IE9%20inconsistency">let us know if you discover inconsistencies</a>), and we also support more browsers: older Safari versions, Nokia and Blackberry mobile browsers, and Konqueror via the -khtml- prefix. Detection of Opera&#39;s CSS3 support for transitions and transforms was fixed, as well.</p>
+<p>A few big things have kept us busy preparing a good release. Flash detection (Flash Blockers included) became a hot topic and we really wanted to include it, but at the time no reliable or complete mechanism was available. We wanted to include (and still recommend) Mark Pilgrim&#39;s excellent <a target="_blank" href="https://github.com/diveintomark/flashblockdetector">Flash Block Detector</a> but decided that it was too large a codebase to include in the default release of Modernizr&mdash;especially given the <a target="_blank" href="http://www.modernizr.com/news/updates-on-modernizr-front">modular Modernizr 2 plans</a> on the horizon&mdash;and so Flash detection is out for now.</p>
+<p>Then came the discovery that Google Chrome implemented <a target="_blank" href="http://www.quirksmode.org/mobile/tableTouch.html">Touch events</a> even on the desktop (why, Google, why?) paired with the regrettable fact that Palm&#39;s WebOS browser <em>doesn&#39;t support common Touch events at all</em>. For a browser that only exists on touch-based devices, this was too critical an issue for us to ignore. So Touch testing went out again, too.</p>
+</li>
+</ul>
+<p>We have many more features we&#39;d like to include; please visit the <a href="http://github.com/Modernizr/Modernizr/issues/#list">GitHub issue tracker</a> to review all the additional tests.</p>
+<p>For developers, contributors and people looking to learn from Modernizr we now have a set of <a target="_blank" href="http://github.com/Modernizr/Modernizr/tree/master/test/">unit tests available on the GitHub repository</a>, courtesy of Paul. These help prevent errors and inconsistencies from finding their way into the source code, making Modernizr more robust and reliable. The unit tests also include a second part, which pulls the data tables in from <a target="_blank" href="http://findmebyip.com/">Find Me By IP</a> and creates a feature parity overview for all the browsers.</p>
+<p>Along with the 1.5 release comes a license upgrade: Modernizr is now <a href="/license/">dual-licensed under BSD and MIT</a>.</p>
+<p>Thanks for all the input and code to miketaylr, fearphage, kangax, richbradshaw, @itpastorn, @jon_neal, dshaw, itrelease, mathiasbynens, airportyh, jeffsmith, rjcoelho, lucideer, peol and mislav. The high quality of this release wouldn&#39;t be possible with input from experts like these.</p>
+<p>We hope you enjoy the hard work we&#39;ve all put into it, but we&#39;d love to hear your feedback on Modernizr 1.5&#39;s new changes, so <a target="_blank" href="http://twitter.com/?status=@Modernizr%20I%20think%20the%201.5%20release%20is%20%E2%80%A6%20">let us know via Twitter what you think</a>!</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-15</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-15</guid><dc:creator><![CDATA[<a href="http://farukat.es/">Faruk Ateş</a> and <a href="http://paulirish.com/">Paul Irish</a>]]></dc:creator><pubDate>Mon, 14 Jun 2010 07:00:00 GMT</pubDate></item><item><title><![CDATA[Updates on the Modernizr front]]></title><description><![CDATA[<p>As you&#39;ve undoubtedly noticed, it&#39;s been relatively quiet on the Modernizr front from our side, with no news or new releases since the start of the year. Nonetheless, everyone else has started getting more and more busy <em>using</em> Modernizr to enhance their sites without sacrificing control over older browsers. Progressive Enhancement is becoming increasingly commonplace and we couldn&#39;t be more excited about that.</p>
+<p>So where do things stand? Well, we&#39;ve been working, <a href="http://github.com/Modernizr/Modernizr">over on GitHub</a>, at getting the next release of Modernizr ready, version 1.2. We&#39;re not quite there yet, but we are setting a planned release date of <strong>Thursday, April 22</strong>. Every time we&#39;re almost there another new feature or issue pops up that we have a hard time excluding from the next release, but it&#39;s more important to iterate regularly than do big pushes for a tool like this.</p>
+<p>Related to all this has been an increasing effort towards realigning Modernizr; the site isn&#39;t what it could and should be, the community around Modernizr isn&#39;t as cohesive yet which leads to fragmented and overlapping efforts in promoting the tool, and the explanation of what Modernizr is and how it works is still lacking. Clearly, lots of room for improvement&mdash;and we&#39;re not just aware of it, we&#39;re working to fix it.</p>
+<p>One of the biggest issues of the current site is the static-ness of it. For instance, we really want to promote sites that use Modernizr, but there&#39;s no easy way to submit your site to us. This and many other things will be addressed in the redesign.</p>
+<p>The absolute biggest announcement is saved for last, and that is: <strong>Modernizr 2</strong>.</p>
+<p>Early on, before Modernizr was released yet, my friend <a href="http://www.mkrieger.org/">Mike Krieger</a> and I were brainstorming on how to offer Modernizr. Initially, my plan had been to offer some configuration tool wherewith you could specify which features you wanted to test for, and download a customized build of Modernizr that suited your needs. Mikey and I got all excited by the possibilities of tracking this data, observing which features web designers &amp; developers were most interested in, and so forth.</p>
+<p>Then we realized that this brought about a <em>ton</em> of complexity, far too much for the introduction of the library. So, we dropped that idea and instead focused on making a simple, easy to use toolkit without any complexity in how to get it: just download it, include it and you&#39;re set.</p>
+<p>Well, turns out that the idea itself wasn&#39;t a <em>bad</em> one, it was just too ahead of its time. As the Modernizr library grew its feature-set, it also grew its footprint and execution time. Thanks to the talents of <a href="http://paulirish.com/">Paul</a> and the many contributors committing code over on GitHub, it has stayed incredibly lean and fast&mdash;but also at the cost of things we&#39;d really like to add, like SVG.</p>
+<p>SVG is an oft-requested feature for Modernizr to test against, and we really want to add it. But, to do it right would involve doing not just a basic one-line test against something like &quot;window.SVG&quot;&mdash;no, you have to do a very large number of tests so you can accurately report what parts of SVG the browser supports. To add that to Modernizr right now would bloat the library and slow it down, even though most users won&#39;t make use of it.</p>
+<p>With <em>Modernizr 2</em> we&#39;ll be breaking things up a little and allow you to customize your download <em>if you so choose to</em>. There will still be one simple, default download containing the core features of the library, but for advanced users there will be a configuration tool so you can pick and choose and add (or subtract) all the features you want.</p>
+<p>So those are some of the updates on Modernizr. Next week Thursday we hope to release version 1.2 so if all goes well, you&#39;ll hear from us again soon.</p>
+]]></description><link>https://modernizr.com/news//news/updates-on-modernizr-front</link><guid isPermaLink="true">https://modernizr.com/news//news/updates-on-modernizr-front</guid><dc:creator><![CDATA[<a href="http://farukat.es/">Faruk Ateş</a>]]></dc:creator><pubDate>Wed, 14 Apr 2010 07:00:00 GMT</pubDate></item><item><title><![CDATA[2009 is a wrap]]></title><description><![CDATA[<p>Since we launched with the first public release of Modernizr on <a href="http://twitter.com/Modernizr/status/2426150132">July 1st of last year</a>, we have seen some exciting things happen. The library itself has gone from a humble 0.9 beta to a rock solid 1.1 release, almost doubling the amount of features detected whilst maintaining a small codebase and a lean, fast execution of the script.</p>
+<p>These developments have not gone unnoticed: searching the Web for &quot;Modernizr&quot; in June of last year produced only a couple dozen results, all from people misspelling &quot;modernizer&quot;; today, there are <a href="http://www.google.com/search?q=Modernizr">over 56,000 pages</a> on the Web talking about it. Mark Pilgrim&#39;s upcoming book, <a href="http://diveintohtml5.info/">Dive Into HTML5</a>, discusses Modernizr in great depth, and the <a href="http://oreilly.com/catalog/9780596155940">CSS Cookbook, 3rd Edition</a> features it as well.</p>
+<p>The Modernizr.com website itself didn&#39;t sit still either; we welcomed well over 90,000 visitors, expanded with Documentation and News areas, endured two Google AppEngine downtimes and got some great feedback on how to better present and explain Modernizr to new visitors.</p>
+<p>Of those 90K+ visitors, we have some interesting browser statistics to share with you:</p>
+<ul>
+<li>Firefox is still the web browser of choice for developers, accounting for 49% of all our visitors;</li>
+<li>Safari comes second with 30%; not a huge surprise as more and more web designers and developers switch to the Mac, and Safari&#39;s built-in Web Inspector is a handy alternative to several Firefox plugins for debugging websites with;</li>
+<li>Chrome is picking up momentum as well, guiding almost 9% of our visitors, leaving…</li>
+<li><p>…Internet Explorer and Opera to battle for the remainder, together with a hodgepodge of miscellaneous browsers and browser versions.</p>
+<p>On the Operating System&#39;s side, we see the Mac platform edging out Windows just barely: 46.8% versus 46.5%. The various Linux flavors accounted for about 6% of visitors.</p>
+<p>Looking at our screen resolutions data, I was amused and intrigued: its pie chart for Modernizr.com&#39;s visitors looks like a Trivial Pursuit logo, with almost equal shares for 1440x900, 1680x1050, 1920x1200, 1280x800, 1280x1024, with the last slice made up of all the remaining resolutions. Clearly there is no overly-dominant single resolution among web designers, but it&#39;s good to know the vast majority of our visitors has at least 1280 horizontal pixels available.</p>
+<p>Looking ahead to 2010, we hope you&#39;ll continue to enjoy using Modernizr and perhaps even contribute to make this JavaScript library more versatile and useful as a tool for cutting-edge web developers.</p>
+</li>
+</ul>
+<p>— <a href="http://farukat.es/">Faruk Ateş</a> and <a href="http://paulirish.com/">Paul Irish</a></p>
+]]></description><link>https://modernizr.com/news//news/2009-wrap</link><guid isPermaLink="true">https://modernizr.com/news//news/2009-wrap</guid><dc:creator><![CDATA[<a href="http://farukat.es/">Faruk Ateş</a>]]></dc:creator><pubDate>Mon, 04 Jan 2010 08:00:00 GMT</pubDate></item><item><title><![CDATA[This holiday season, give the gift of progressive enhancement with Modernizr 1.1!]]></title><description><![CDATA[<p>We&rsquo;re delighted to bring you <a href="http://www.modernizr.com/releases/#release-1.1">Modernizr 1.1</a>, a handy upgrade to the increasingly popular HTML5 and CSS3 detection toolkit. Now that <a href="http://github.com/Modernizr/Modernizr">Modernizr is on GitHub</a> we&rsquo;re seeing contributions come in for additional features from many different people. We want to express special thanks to Remy Sharp, Mike Taylor, Jan Lehnardt, Fearphage and Ms2ger for their work pushing Modernizr forward.&nbsp;</p>
+<p>All of us who work on and contribute to Modernizr feel that it is <em>the</em> best way to start taking advantage of HTML5 and CSS3 in your websites today, which is why this new release covers even more ground of both specifications. We&rsquo;re heading towards supporting absolutely everything from the next generation of web technologies that is being implemented by any of the major browsers today, so that you as a developer know what you can <em>and can&rsquo;t</em> expect from your visitors&rsquo; browser.</p>
+<p>New in this release is detection for:</p>
+<ul>
+<li>localStorage</li>
+<li>sessionStorage</li>
+<li>Web Workers</li>
+<li>applicationCache</li>
+<li>All new HTML5 input properties</li>
+<li><p>HTML5 Audio and Video formats (supported codecs)</p>
+<p>We also support CSS Gradients the way Firefox/Mozilla have them implemented (<code>linear-gradient(…)</code> and <code>radial-gradient(…)</code> ). We still support Safari&rsquo;s syntax (<code>gradient(linear|radial, …)</code>, and use the same &ldquo;cssgradients&rdquo; property on the Modernizr object for it. That means you&rsquo;ll be responsible for covering both Firefox and Safari&rsquo;s CSS syntax if you take advantage of this feature and are working with fallbacks for the other browsers.</p>
+<p>If all of that still isn&rsquo;t enough for you, Modernizr now features a simple plugin architecture so that you can add your own detection tests. To use the new <code>addTest()</code> method, please refer to <a href="http://www.modernizr.com/docs/">the updated Documentation</a>.</p>
+<p>There is a lot more planned for Modernizr and this 1.1 release lays some of the ground work to reach that goal. We hope you enjoy this release and have a great month ringing out an exciting 2009.</p>
+</li>
+</ul>
+<p>&mdash; Team Modernizr</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-11</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-11</guid><dc:creator><![CDATA[<a href="http://farukat.es/">Faruk Ateş</a>]]></dc:creator><pubDate>Mon, 07 Dec 2009 08:00:00 GMT</pubDate></item><item><title><![CDATA[Small October Updates]]></title><description><![CDATA[<p>A couple of quick update for you today. First, Modernizr is featured heavily in Mark Pilgrim&#39;s upcoming <a href="http://diveintohtml5.info/detect.html" rel="external">Dive Into HTML5</a>, which is being written and published online and will be available in book form upon completion. To get such prominent placement in one of Pilgrim&#39;s books is an honor, to say the least, but it especially strengthens our belief that progressive feature detection—which is what Modernizr does—is the best approach to web development today.</p>
+<p>Second, we&#39;ve added a site to <a href="/sites/">the gallery</a>: FindMeByIP.com uses Modernizr to tell you more than just your IP; it tells you what your browser is capable of. It&#39;s a beautiful design and we&#39;re excited to see Modernizr being used on it.</p>
+<p>Lastly, there has been some feedback that the front page of Modernizr doesn&#39;t convey the value, purpose and benefits of the toolkit very well. These concerns have been taken into consideration and work is underway to change that. We definitely acknowledge that the real value of Modernizr isn&#39;t directly apparent, so we&#39;re planning to fix that. More on that hopefully soon.</p>
+]]></description><link>https://modernizr.com/news//news/small-october-updates</link><guid isPermaLink="true">https://modernizr.com/news//news/small-october-updates</guid><dc:creator><![CDATA[<a href="http://farukat.es/">Faruk Ateş</a>]]></dc:creator><pubDate>Sun, 11 Oct 2009 07:00:00 GMT</pubDate></item><item><title><![CDATA[GitHub'd]]></title><description><![CDATA[<p>Just a quick announcement that <a href="http://github.com/Modernizr/Modernizr">Modernizr is now available on GitHub</a>. Hack away!</p>
+]]></description><link>https://modernizr.com/news//news/githubd</link><guid isPermaLink="true">https://modernizr.com/news//news/githubd</guid><dc:creator><![CDATA[<a href="http://farukat.es/">Faruk Ateş</a>]]></dc:creator><pubDate>Sat, 26 Sep 2009 07:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr, meet GitHub]]></title><description><![CDATA[<p>When Modernizr was originally released in July, requests came in right away for seeing it hosted on code repositories like <a href="http://code.google.com/hosting/">Google Code</a> or <a href="http://github.com/">GitHub</a>. The promise at the time was: &quot;once it goes 1.0&quot;.</p>
+<p>We had only one real reason for not doing so right away: the choice of which public repository service to use. At the time, Modernizr&#39;s code base was created and managed pretty much solely by myself, and my experience with these repositories was pretty limited. I didn&#39;t want to commit to one only to realize halfway through the next release that I preferred another.</p>
+<p>Well, Modernizr has since <a href="http://www.modernizr.com/news/modernizr-goes-1-0">gone 1.0</a> and not only that, but the project has a new code lieutenant. <a href="http://paulirish.com/">Paul Irish</a> will take on the role of governing Modernizr&#39;s codebase, with me taking a slightly more backseat spot in overseeing the general direction of the project. In other words, I&#39;ll play a more directorial role whilst Paul will deal with the specifics of the library&#39;s codebase.</p>
+<p>Paul&#39;s skill and talent is already widely recognized and we feel he is a great fit for the role of code lieutenant for Modernizr.</p>
+<p>His first assignment was to choose a code repository he felt most appropriate for Modernizr. We discussed the various pros and cons with regards to our needs (codebase, feedback, support tickets and so on) and what each service provides, and the choice has settled on: <strong><a href="http://github.com/">GitHub</a></strong>.</p>
+<p>In the coming days, Modernizr will start living on GitHub and the Modernizr.com site will be updated to direct visitors there instead. Once there, everyone will be able to contribute to and work on Modernizr directly, making the library even better. Meanwhile, please welcome Paul as formal code lieutenant.</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-meet-github</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-meet-github</guid><dc:creator><![CDATA[<a href="http://farukat.es/">Faruk Ateş</a>]]></dc:creator><pubDate>Thu, 24 Sep 2009 07:00:00 GMT</pubDate></item><item><title><![CDATA[Modernizr goes 1.0!]]></title><description><![CDATA[<p>I&#39;m very pleased to announce <a href="/releases/#release-1.0"><strong>Modernizr 1.0</strong></a>, the first major milestone release of the JavaScript library that detects native implementations of HTML5 and CSS3 features in browsers.</p>
+<p>Before I tell you about all the useful new features that Modernizr 1.0 detects for, I want to express my immense gratitude to, first and foremost, <a href="http://paulirish.com" rel="external">Paul Irish</a> and <a href="http://benalman.com/" rel="external">Ben Alman</a>. The two of them restructured most of Modernizr&#39;s 0.9 codebase, leaving it functionally intact but reducing the file size by a stunning 35% and improving performance here and there. I also want to thank <a href="http://ejohn.org/" rel="external">John Resig</a>, Mark Pilgrim, Leonid Khachaturov, John Tantalo and Peter Speck. All of whom have made contributions in direction and/or code.</p>
+<p><strong>So what&#39;s new in Modernizr 1.0?</strong> To start off, Modernizr 1.0 can now be included in the <code>head</code> section of your website. We&#39;ve changed its behavior so that it adds the classes—which represent each browser&#39;s native implementations—to the <code>html</code> element instead of the <code>body</code> element. See the notes below for details on this.</p>
+<p>Let&#39;s get to the features! We now detect for native browser support for the HTML5 <code>audio</code> and <code>video</code> elements, as well as the <a href="http://www.w3.org/TR/geolocation-API/" rel="external">Geolocation API</a>. We&#39;ve also added a <em>second</em> test for Canvas, specifically for Canvas Text. This because various browsers support Canvas drawing but not yet Canvas <em>Text</em>, and the ability to draw text in a Canvas is rather significant and thus warranted its own test.</p>
+<p>Moving on, we&#39;ve added a series of tests for HTML5 input data types, such as <code>input type=&quot;search&quot;</code> and <code>input type=&quot;range&quot;</code>. All of these are combined into an array that&#39;s accessible from the JavaScript <code>Modernizr</code> object, under <code>Modernizr.inputtypes</code>. Full details are available in the new <a href="/docs/">Documentation</a> area.</p>
+<p>Last and <em>most certainly not least</em> is the new <code>@font-face</code> detection, courtesy of some more work by Paul Irish. That&#39;s right, with Modernizr you can now detect whether a browser will <em>actually render</em> embedded @font-face fonts or not. This, like everything else in Modernizr, is an actual feature detection test.</p>
+<p><strong>Note:</strong> we&#39;re cheating a little in the <code>@font-face</code> test because we let <abbr title="Internet Explorer">IE</abbr>5 and above pass the test directly; <abbr>IE</abbr> supports the standardized <code>@font-face</code> syntax but it only supports <a href="http://en.wikipedia.org/wiki/Embedded_OpenType" rel="external"><abbr title="Embedded OpenType ">EOT</abbr> fonts</a>. Browsers that support <code>@font-face</code> font embedding with OpenType and/or TrueType fonts are tested using a custom one-glyph font that Paul created, and which is now <em>part of Modernizr</em> in Base64.</p>
+<p>With all these new tests and additions and even a font glyph inclusion right there in the JavaScript, you may be wondering what the new file size is. The answer: <strong>16kb normal</strong>, slightly over <strong>7kb minified</strong>.</p>
+<h3 id="important-questions-answered">Important questions answered</h3>
+<p><strong>Is Modernizr 1.0 fully backwards-compatible with 0.9?</strong><br />
+Yes and no. As far as the JavaScript side is, yes, you should be able to just replace the old 0.9 with the new 1.0 file and adjust your script include path accordingly, and everything should Just Work.</p>
+<p>However, as mentioned above, the CSS side has one crucial change: Modernizr 1.0 adds the various class names to the <code>html</code> element instead of, previously, the <code>body</code> element. Thus, if your CSS rules say <code>body.csstransforms</code>, you&#39;ll have to change them to read either just <code>.csstransforms</code> or <code>html.csstransforms</code>.</p>
+<p><strong>Is this valid?</strong><br />
+Yes, under HTML5—which is what Modernizr is meant to be used under—it is perfectly valid to put a <code>class</code> attribute on the <code>html</code> element. It works just fine on HTML4 and XHTML documents, but it won&#39;t validate. (but remember: <strong>validation is a tool, not a goal</strong>)</p>
+<p><strong>Additional note:</strong><br />
+Modernizr 1.0 also checks for (and if found, removes) the class <code>no-js</code> from the <code>html</code> element. In its place, it adds the class <code>js</code>, which means that if you start your templates with the code <code>&lt;html class=&quot;no-js&quot;&gt;</code> and then include the Modernizr library, you can use the classes <code>.no-js</code> and <code>.js</code> to respectively determine whether JavaScript is disabled or enabled in the browser.</p>
+<p><strong>Will Modernizr go on GitHub / Bitbucket / similar now that it is 1.0?</strong><br />
+Yes, very soon it will get hosted on a public repository so that people can contribute a little more directly. We haven&#39;t decided yet which one, but no new releases will be made until it&#39;s hosted publicly.</p>
+<p><strong>What do you have planned for the next release?</strong><br />
+Wait and see! Fortunately, we&#39;ve now added a News section and RSS feed to Modernizr.com, so you can simply <a href="/feeds/news">subscribe to the feed</a> and we&#39;ll keep you posted of all things Modernizr.</p>
+<p>Now go and <a href="/">download Modernizr 1.0</a>!</p>
+]]></description><link>https://modernizr.com/news//news/modernizr-goes-1-0</link><guid isPermaLink="true">https://modernizr.com/news//news/modernizr-goes-1-0</guid><dc:creator><![CDATA[<a href="http://farukat.es/">Faruk Ateş</a>]]></dc:creator><pubDate>Sat, 05 Sep 2009 07:00:00 GMT</pubDate></item></channel></rss>

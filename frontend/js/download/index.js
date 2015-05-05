@@ -57,6 +57,8 @@ if (location.hash.length || location.search.length) {
   }
 }
 
+
+
 if ('Worker' in window) {
   var buildWorker = new Worker('/js/download/workers/build.js');
   var gzipWorker = new Worker('/js/download/workers/gzip.js');
@@ -114,3 +116,24 @@ React.render(DownloadUI({
   currentSearch: currentSearch,
   shouldBuild: shouldBuild
 }), document.getElementById('main'));
+
+if (typeof window.Windows !== 'undefined') {
+
+  var activation = window.Windows.ApplicationModel.Activation;
+
+  window.Windows.UI.WebUI.WebUIApplication.addEventListener('activated', function (args) {
+
+    if (args.kind === activation.ActivationKind.voiceCommand) {
+
+      var speechRecognitionResult = args.result;
+
+      var textSpoken =
+        speechRecognitionResult.text !==
+        undefined ? speechRecognitionResult.text : 'EXCEPTION';
+
+      location.search = '?q=' + textSpoken;
+
+    }
+
+  });
+}
