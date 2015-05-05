@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
-  <CommandSet xml:lang="en-us" Name="groupPost">
-    <CommandPrefix> modernizer detects </CommandPrefix>
-    <Example>Modernizr detects search css</Example>
-    <Command Name="addNote">
-      <Example>search css</Example>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase">[search] [for] {detect}</ListenFor>
-      <Feedback>searching for {detect} in Modernizr's feature detects</Feedback>
-      <Navigate Target="/download"/>
+<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="modernizr">
+    <CommandPrefix>Modernizr</CommandPrefix>
+    <Example>Modernizr search css</Example>
+    <Command Name="search">
+      <Example>search {message}</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">[please] search {noteSubject}</ListenFor>
+      <Feedback>searching Modernizr for {noteSubject}</Feedback>
+      <Navigate Target="/search.htm"/>
     </Command>
+    <PhraseTopic Label="noteSubject" Scenario="Dictation"></PhraseTopic>
   </CommandSet>
 </VoiceCommands>
