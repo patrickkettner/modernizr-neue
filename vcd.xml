@@ -5,7 +5,7 @@
     <Example>Modernizr search css</Example>
     <Command Name="search">
       <Example>search {message}</Example>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase">[please] search {noteSubject}</ListenFor>
+      <ListenFor RequireAppName=”ExplicitlySpecified”>[please] search for {noteSubject} on {builtin:AppName}</ListenFor>
       <Feedback>searching Modernizr for {noteSubject}</Feedback>
       <Navigate Target="/search.htm"/>
     </Command>
